@@ -1,4 +1,9 @@
 <#macro stepdetails test>
+<div class="row mb-3">
+ <#list test.getMedia() as media>
+ <@mediaSingleOneLine media />
+ </#list>
+ </div>
   <#if test.hasLog()>
     <#list test.logs as log>
       <div><#if log.exception??>
